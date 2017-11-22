@@ -13,6 +13,7 @@ Seems you can't export/import objects so you need to:
 4. Create Custom Tabs of objects to use GUI to populate and see and manipulte data easily. `Create` -> `Tabs`.
 5. Your environment should be good.
 
+
 ### What's finished:
 - All objects were created
 - A Workflow rule was made
