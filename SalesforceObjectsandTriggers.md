@@ -1,5 +1,5 @@
-```
 - An APEX class for Project Orders:
+
 ```
 public class ProjectOrderManager {
     public static ID addProjectOrder(Date DatetoInsert, String NameToInsert) {
@@ -11,7 +11,9 @@ public class ProjectOrderManager {
 }
 
 ```
+
 - An APEX class for Project Order Details:
+
 ```
 public class ProjectOrderDetailManager {
      public static ID addProjectOrderDetail(double costToInsert, Decimal quantityToInsert, String NameToInsert) {
@@ -23,7 +25,9 @@ public class ProjectOrderDetailManager {
 }
 
 ```
+
 - An APEX class for Project Products:
+
 ```
 public class ProjectProductManager {
       public static ID addProjectProduct(String DescriptionToInsert, Decimal InventoryToInsert, String NameToInsert) {
@@ -35,7 +39,9 @@ public class ProjectProductManager {
 }
 
 ```
+
 - An APEX trigger for Project Products Inventory:
+
 ```
 trigger ProjectOrderDetailTrigger on Project_Order_Detail__c (before 
     insert,  before update) {
@@ -49,10 +55,11 @@ trigger ProjectOrderDetailTrigger on Project_Order_Detail__c (before
         }
     }
 }
-
 ```
+
 - An APEX trigger for Project Products Inventory subtraction:
 
+```
 trigger InventoryTrigger on Project_Order_Detail__c (after insert,  after update) {
     if (trigger.isAfter) {
         if (trigger.isUpdate || trigger.isInsert) {
